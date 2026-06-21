@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع خدماتنا | Gridflow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* إعدادات عامة للتصميم */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* شريط التنقل العلوي */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6c5ce7;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #6c5ce7;
+        }
+
+        /* القسم الرئيسي (البداية) */
+        .hero {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            background-color: #ffffff;
+            color: #6c5ce7;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        /* الأقسام العامة */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #2d3436;
+        }
+
+        /* قسم الخدمات */
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            color: #6c5ce7;
+            margin-bottom: 15px;
+        }
+
+        /* قسم التواصل */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: #6c5ce7;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #5b4bc4;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">موقعي | Gridflow</div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <h1>مرحباً بك في موقعنا الرسمي</h1>
+        <p>نحن هنا لنقدم لك أفضل الحلول والخدمات الرقمية التي تساعدك على تطوير أعمالك والوصول إلى أهدافك بكل احترافية.</p>
+        <a href="#services" class="btn">اكتشف خدماتنا</a>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section id="about">
+        <h2>من نحن</h2>
+        <p style="max-width: 800px; margin: auto; font-size: 18px;">
+            نحن فريق شغوف بالتكنولوجيا والتطوير، نسعى لتقديم أعلى مستويات الجودة في خدماتنا. نؤمن بأن النجاح يبدأ من فهم احتياجات العميل وتقديم حلول مبتكرة تناسب تطلعاته.
+        </p>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services">
+        <h2>خدماتنا المميزة</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>تصميم المواقع</h3>
+                <p>نصمم لك مواقع عصرية ومتجاوبة مع جميع الأجهزة لضمان أفضل تجربة للمستخدم ولإبراز هويتك الرقمية.</p>
+            </div>
+            <div class="service-card">
+                <h3>التسويق الرقمي</h3>
+                <p>نساعدك في الوصول إلى جمهورك المستهدف من خلال استراتيجيات تسويق فعالة على مختلف المنصات.</p>
+            </div>
+            <div class="service-card">
+                <h3>الدعم الفني</h3>
+                <p>فريقنا متواجد دائماً لتقديم الدعم الفني وحل أي مشكلات تواجهك لضمان استمرارية عملك بدون توقف.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>📍 <strong>العنوان:</strong> المملكة العربية السعودية، الرياض</p>
+                <p>📧 <strong>البريد الإلكتروني:</strong> info@gridflow.com</p>
+                <p>📞 <strong>رقم الهاتف:</strong> 966500000000+</p>
+            </div>
+            
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" placeholder="الاسم الكريم" required>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <textarea rows="5" placeholder="رسالتك أو استفسارك..." required></textarea>
+                <button type="submit">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- تذييل الموقع -->
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة لموقع Gridflow.</p>
+    </footer>
+
+</body>
+</html>
